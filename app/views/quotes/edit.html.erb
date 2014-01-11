@@ -1,0 +1,8 @@
+<h1>Edit Quote</h1>
+
+<%= form_for @quote, method: :patch do |f| %>
+<%= render 'form' %>
+
+<%= link_to 'Back', quote_path %>
+
+<% end %>

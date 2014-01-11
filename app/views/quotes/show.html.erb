@@ -1,0 +1,19 @@
+<h1>Here's your quote</h1>
+
+<p>
+  <strong>Quote:</strong>
+  <%= @quote.content %>
+  <br>
+</p>
+<p>
+  <strong>Author:</strong>
+  <%= @quote.author %>
+</p>
+<p>
+  <strong>Created At:</strong>
+  <%= @quote.created_at %>
+</p>
+
+
+<%= link_to 'New quote', new_quote_path %> <br>
+<%= link_to 'Quotes', quotes_path %>
