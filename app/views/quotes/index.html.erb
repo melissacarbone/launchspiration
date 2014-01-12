@@ -21,20 +21,19 @@
     <!-- Left Nav Section -->
     <ul class="left">
       <li><a href="/quotes/new">Add Your Quote!</a></li>
-      <li><a href="/quotes">Get New Quote!</a></li>
     </ul>
   </section>
 </nav>
-<h1>Need some inspiration?  Click Refresh!</h1>
+<h1>Need some inspiration? Click <a href='/quotes'>Here!</a></h1>
 
-<div>
+
+<div >
 <p>
-  <strong>Quote:</strong>
-  <%= @rquote.content %>
+  "<%= @rquote.content %>"
   <br>
 </p>
 <p>
-  <strong>Author:</strong>
+  <strong>Launcher:</strong>
   <%= @rquote.author %>
 </p>
 <p>
