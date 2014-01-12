@@ -10,21 +10,44 @@
       </ul>
     </div>
   <% end %>
-  <p>
-    <%= f.label :content, 'Quote' %><br>
+  <div class='row collapse'>
+    <div class='small-3 columns'>
+    <%= f.label :content, 'Quote' %>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='small-9 columns'>
     <%= f.text_area :content %>
-  </p>
+    </div>
+  </div>
 
-  <p>
-    <%= f.label :author, 'Launcher' %><br>
-    <%= f.text_field :author %>
-  </p>
+  <div class='row collapse'>
+    <div class='small-3 columns'>
+      <%= f.label :author, 'Launcher' %>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='small-3 columns'>
+      <%= f.text_field :author %>
+    </div>
+  </div>
 
-   <p>
-    <%= f.label :cohort %><br>
-    <%= f.text_field :cohort %>
-  </p>
+  <div class='row collapse'>
+    <div class='small-3 columns'>
+      <%= f.label :cohort, 'Cohort' %>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='small-3 columns'>
+      <%= f.text_field :cohort %>
+    </div>
+  </div>
 
-  <%= f.submit %>
+  <div class='row collapse'>
+    <div class='small-3 columns'>
+      <%= f.submit %>
+    </div>
+  </div>
+
 
 <% end %>
