@@ -1,5 +1,7 @@
 class QuotesController < ApplicationController
 
+  before_filter :authenticate_user!
+
   def index
     @rquote = Quote.find_by_id(rand(Quote.count)+1)
   end

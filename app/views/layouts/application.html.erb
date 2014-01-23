@@ -11,7 +11,40 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body style="background:#FF6378">
+  <body>
+    <nav class="top-bar medium-12 columns" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="/">Launchspiration</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="/quotes">Menu</a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <% if current_user %>
+            <li class='current_user'>Signed in as: <%= current_user.name %> <li>
+            <li class='active'><%= link_to "Sign Out", signout_path %></li>
+          <% else %>
+            <li class='active'><%= link_to "Sign in with Twitter", "/auth/twitter" %></li>
+          <% end %>
+          <li class="has-dropdown">
+            <!-- <a href="#">Right Button with Dropdown</a> -->
+            <ul class="dropdown">
+              <!-- <li><a href="#">First link in dropdown</a></li> -->
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Left Nav Section -->
+        <ul class="left">
+        <% if current_user %>
+          <li><%= link_to "Get Started!", quotes_path %><li>
+        <% end %>
+        </ul>
+        </section>
+      </nav>
   <div class ="wrapper">
     <div><%= yield %></div>
     <%= javascript_include_tag "application" %>
