@@ -20,7 +20,12 @@
 
     <!-- Left Nav Section -->
     <ul class="left">
-      <li><a href="/quotes">Keep Calm and Code On!</a></li>
+      <% if current_user %>
+        <li class='current_user'>Welcome <%= current_user.name %>!<li>
+        <li class='active'><%= link_to "Sign Out", signout_path %></li>
+      <% else %>
+        <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+      <% end %>
     </ul>
   </section>
 </nav>
@@ -36,5 +41,7 @@
     </p>
   </div>
 </div>
+
+
 
 
