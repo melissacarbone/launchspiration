@@ -41,6 +41,7 @@ group :development, :test do
   gem 'shoulda'
   gem 'valid_attribute'
   gem 'capybara'
+  gem 'quiet_assets'
 end
 
 gem 'rails_12factor', group: :production
