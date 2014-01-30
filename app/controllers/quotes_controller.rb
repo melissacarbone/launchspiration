@@ -3,7 +3,7 @@ class QuotesController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @rquote = Quote.find_by_id(rand(Quote.count)+1)
+    @rquote = Quote.random
   end
 
   def new
@@ -12,9 +12,8 @@ class QuotesController < ApplicationController
 
   def create
     @quote = Quote.new(quote_params)
-
     if @quote.save
-      redirect_to quotes_path
+      redirect_to quotes_path, notice: 'Quote was successfully created!'
     else
       render 'new'
     end

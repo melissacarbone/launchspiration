@@ -3,7 +3,7 @@ class Quote < ActiveRecord::Base
   validates_presence_of :author
 
   def self.random
-    find_by_id(rand(Quote.count)+1)
+    limit(1).offset(rand(self.count)).first
   end
 
 end

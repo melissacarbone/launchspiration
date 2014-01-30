@@ -42,6 +42,7 @@ group :development, :test do
   gem 'valid_attribute'
   gem 'capybara'
   gem 'quiet_assets'
+  gem 'launchy'
 end
 
 gem 'rails_12factor', group: :production

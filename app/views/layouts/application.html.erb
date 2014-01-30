@@ -41,11 +41,13 @@
         <ul class="left">
         <% if current_user %>
           <li><%= link_to "Get Started!", quotes_path %><li>
+          <li><%= link_to "Add New Quote", new_quote_path %><li>
         <% end %>
         </ul>
         </section>
       </nav>
   <div class ="wrapper">
+    <%= notice %>
     <div><%= yield %></div>
     <%= javascript_include_tag "application" %>
   </div>
