@@ -1,9 +1,6 @@
 require 'spec_helper'
 
 feature 'User adds a test' do
-  before do
-    Capybara.reset_sessions!
-  end
 
   scenario 'After authenticating' do
     OmniAuth.config.test_mode = true
