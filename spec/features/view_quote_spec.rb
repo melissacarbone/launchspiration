@@ -10,7 +10,6 @@ feature 'User views a quote' do
     visit root_path
     click_link "Sign in with Twitter"
     click_link "Get Started!"
-    save_and_open_page
     expect(page).to have_content("Need some inspiration? Click Here!")
   end
 end
